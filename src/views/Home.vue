@@ -1,6 +1,12 @@
 <template>
   <div class="home">
+    <!--每日推荐-->
+    <div>
+    <div class="home-title">
+    <h3 class="title">每日推荐</h3>
+    </div>
     <solidlist :list="index.recommend"></solidlist>
+    </div>
   </div>
 </template>
 
@@ -24,3 +30,10 @@ export default {
   }
 }
 </script>
+<style scoped>
+.home-title{
+  font-size: 0.16rem;
+  display: flex;
+  padding: 0 0.05rem;
+}
+</style>
