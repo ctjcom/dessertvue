@@ -14,6 +14,10 @@ Vue.prototype.axios=axios;
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 Vue.use(MintUI)
+//引入vant的icon图标
+import { Icon } from 'vant';
+import 'vant/lib/icon/local.css';
+Vue.use(Icon);
 
 Vue.config.productionTip = false
 

@@ -18,10 +18,11 @@
 </template>
 
 <script>
+import { constants } from 'crypto';
 export default {
   data() {
     return {
-
+      list:'',
       listStyle: {
         marginLeft: 0
       },
@@ -35,12 +36,15 @@ export default {
       maxLeft: 0 //最大位移
     };
   },
-  props:{list:{
+  props:{
+    content:{
     default:"",
   }},
-  created(){
-
-  },
+ watch:{
+   content(data){
+     this.list=data;
+   }
+ },
   methods: {
     start(e) {
       this.clientX = e.touches[0].clientX;

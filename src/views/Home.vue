@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home" ref="home">
     <!--首页轮播-->
     <div class="home-swipe">
     <mt-swipe :auto="4000">
@@ -17,43 +17,65 @@
       <div class="home-title">
         <h3 class="title">每日推荐</h3>
       </div>
-      <solidlist :list="index.recommend"></solidlist>
+      <solidlist :content="index.recommend"></solidlist>
     </div>
     <!--早餐-->
     <div class="home-content">
       <div class="home-title">
         <h3 class="title">营养早餐</h3>
+        <div>
+          <span>更多</span>
+          <van-icon name="arrow" />
+        </div>
       </div>
-      <indexlist :list="index.breakfast"></indexlist>
+      <indexlist :content="index.breakfast"></indexlist>
     </div>
     <!--川菜-->
     <div class="home-content">
       <div class="home-title">
         <h3 class="title">精选川菜</h3>
+         <div>
+          <span>更多</span>
+          <van-icon name="arrow" />
+        </div>
       </div>
-      <indexlist :list="index.siChuan"></indexlist>
+      <indexlist :content="index.siChuan"></indexlist>
     </div>
     <!--湘菜-->
     <div class="home-content">
       <div class="home-title">
         <h3 class="title">湘味人生</h3>
+         <div>
+          <span>更多</span>
+          <van-icon name="arrow" />
+        </div>
       </div>
-      <indexlist :list="index.xiangcai"></indexlist>
+      <indexlist :content="index.xiangcai"></indexlist>
     </div>
     <!--粤菜经典-->
     <div class="home-content">
       <div class="home-title">
         <h3 class="title">粤菜经典</h3>
+         <div>
+          <span>更多</span>
+          <van-icon name="arrow" />
+        </div>
       </div>
-      <indexlist :list="index.yuecai"></indexlist>
+      <indexlist :content="index.yuecai"></indexlist>
     </div>
     <!--软心甜点-->
     <div class="home-content">
       <div class="home-title">
         <h3 class="title">暖心甜点</h3>
+         <div>
+          <span>更多</span>
+          <van-icon name="arrow" />
+        </div>
       </div>
-      <indexlist :list="index.dessert"></indexlist>
+      <indexlist :content="index.dessert"></indexlist>
     </div>
+    <!--回到顶部-->
+    <a href="#" class="gotop" v-show="topbtn">回到顶部</a>
   </div>
 </template>
 
@@ -64,7 +86,8 @@ export default {
   name: "home",
   data() {
     return {
-      index: {}
+      index: {},
+      topbtn:false,
     };
   },
   created() {
@@ -72,6 +95,19 @@ export default {
       this.index = res.data;
       console.log(this.index);
     });
+  },
+  mounted(){
+    window.addEventListener('scroll', this.showtopbtn, true);
+  },
+  methods:{
+    showtopbtn(){
+      var top=document.documentElement.scrollTop
+      if(top>=200){
+        this.topbtn=true;
+      }else{
+        this.topbtn=false;
+      }
+    }
   },
   components: {
     solidlist: solidlist,
@@ -81,6 +117,7 @@ export default {
 </script>
 <style scoped>
 .home {
+  overflow-y:scroll; 
   padding-left: 0.08rem;
 }
 .home-swipe{
@@ -92,6 +129,7 @@ export default {
 }
 .home-search{
   width:100%;
+  box-sizing: border-box;
   margin-top: 0.1rem;
   padding-right:0.08rem; 
 }
@@ -102,6 +140,21 @@ export default {
   font-size: 0.16rem;
   display: flex;
   padding: 0 0.05rem;
+  justify-content: space-between;
+}
+.gotop{
+  display: table-cell;
+  color:#fff;
+  width: .5rem;
+  height: .5rem;
+  line-height: .5rem;
+  font-size: 0.12rem;
+  background: red;
+  opacity: .8;
+  position: fixed;
+  right:0.08rem;
+  bottom: .8rem;
+  border-radius: 50%;
 }
 /*重写mint-ui样式*/
 .home-swipe >>> .mint-swipe-indicators{

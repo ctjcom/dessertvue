@@ -23,10 +23,16 @@ import { constants } from 'crypto';
 export default {
   data() {
     return {
+      list:'',
     };
   },
+  watch: {
+    content(data){
+      this.list=data;
+    }
+  },
   props:{
-      list:{
+      content:{
           default:"",
       }
   }
