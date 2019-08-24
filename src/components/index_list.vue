@@ -10,8 +10,10 @@
       <div class="list-content">
         <h3 class="list-title">{{item.mname}}</h3>
         <div class="list-desc">
-          <span>收藏85</span>
-          <span>浏览126</span>
+          <span><span class="iconfont icon-shoucang
+"></span> 收藏85</span>
+          <span><span class="iconfont icon-liulan
+"></span>浏览126</span>
         </div>
       </div>
     </div>

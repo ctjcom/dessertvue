@@ -80,7 +80,8 @@
       <indexlist :content="index.dessert"></indexlist>
     </div>
     <!--回到顶部-->
-    <a href="#" class="gotop" v-show="topbtn">回到顶部</a>
+    <a href="#" class="gotop" v-show="topbtn"><span style="font-size:0.24rem;" class="iconfont icon-changyongicon-11
+"></span></a>
   </div>
 </template>
 
