@@ -25,7 +25,8 @@
         <h3 class="title">营养早餐</h3>
         <div>
           <span>更多</span>
-          <van-icon name="arrow" />
+          <span class="iconfont icon-changyongicon-2
+"></span>
         </div>
       </div>
       <indexlist :content="index.breakfast"></indexlist>
@@ -36,7 +37,8 @@
         <h3 class="title">精选川菜</h3>
          <div>
           <span>更多</span>
-          <van-icon name="arrow" />
+          <span class="iconfont icon-changyongicon-2
+"></span>
         </div>
       </div>
       <indexlist :content="index.siChuan"></indexlist>
@@ -47,7 +49,8 @@
         <h3 class="title">湘味人生</h3>
          <div>
           <span>更多</span>
-          <van-icon name="arrow" />
+          <span class="iconfont icon-changyongicon-2
+"></span>
         </div>
       </div>
       <indexlist :content="index.xiangcai"></indexlist>
@@ -58,7 +61,8 @@
         <h3 class="title">粤菜经典</h3>
          <div>
           <span>更多</span>
-          <van-icon name="arrow" />
+          <span class="iconfont icon-changyongicon-2
+"></span>
         </div>
       </div>
       <indexlist :content="index.yuecai"></indexlist>
@@ -69,7 +73,8 @@
         <h3 class="title">暖心甜点</h3>
          <div>
           <span>更多</span>
-          <van-icon name="arrow" />
+          <span class="iconfont icon-changyongicon-2
+"></span>
         </div>
       </div>
       <indexlist :content="index.dessert"></indexlist>
