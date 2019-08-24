@@ -9,10 +9,10 @@
       @touchend="end"
     >
     <!--内容区-->
-    <div class="item" v-for="(item,i) of list" :key="i">
+    <router-link tag="div" :to="`/MenuTotal/${item.mid}`" class="item" v-for="(item,i) of list" :key="i">
       <img class="item-img" :src="item.mimg" alt="">
       <p class="item-name">{{item.mname}}</p>
-    </div>
+    </router-link>
     </div>
   </div>
 </template>

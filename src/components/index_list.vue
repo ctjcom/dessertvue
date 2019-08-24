@@ -1,6 +1,6 @@
 <template>
   <div class="index-list">
-    <div class="list" v-for="(item,i) of list" :key="i">
+    <router-link tag="div" :to="`/MenuTotal/${item.mid}`" class="list" v-for="(item,i) of list" :key="i">
       <div class="list-img">
         <img
           :src="item.mimg"
@@ -16,7 +16,7 @@
 "></span>浏览126</span>
         </div>
       </div>
-    </div>
+    </router-link>
   </div>
 </template>
 
@@ -49,9 +49,11 @@ export default {
 }
 .list-img {
   margin-right: 0.08rem;
+  
 }
 .list-img > img {
   width: 1.5rem;
+  min-height: 1rem;
   border-radius: 5px;
   box-shadow: 0 0 4px 2px #ccc;
 }

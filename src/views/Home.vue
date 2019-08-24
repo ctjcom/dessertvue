@@ -4,7 +4,9 @@
     <div class="home-swipe">
     <mt-swipe :auto="4000">
       <mt-swipe-item v-for="(item,i) of index.recommend" :key="i">
+        <router-link :to="`/MenuTotal/${item.mid}`" href="javascript:;">
         <img :src="item.mimg" alt="">
+        </router-link> 
       </mt-swipe-item>
     </mt-swipe>
     </div>
