@@ -25,11 +25,11 @@
     <div class="home-content">
       <div class="home-title">
         <h3 class="title">营养早餐</h3>
-        <div>
+        <router-link tag="div" :to="`/MenuList/${1}`">
           <span>更多</span>
           <span class="iconfont icon-changyongicon-2
 "></span>
-        </div>
+        </router-link>
       </div>
       <indexlist :content="index.breakfast"></indexlist>
     </div>
@@ -37,11 +37,11 @@
     <div class="home-content">
       <div class="home-title">
         <h3 class="title">精选川菜</h3>
-         <div>
+         <router-link tag="div" :to="`/MenuList/${2}`">
           <span>更多</span>
           <span class="iconfont icon-changyongicon-2
 "></span>
-        </div>
+        </router-link>
       </div>
       <indexlist :content="index.siChuan"></indexlist>
     </div>
@@ -49,11 +49,11 @@
     <div class="home-content">
       <div class="home-title">
         <h3 class="title">湘味人生</h3>
-         <div>
+         <router-link tag="div" :to="`/MenuList/${3}`">
           <span>更多</span>
           <span class="iconfont icon-changyongicon-2
 "></span>
-        </div>
+        </router-link>
       </div>
       <indexlist :content="index.xiangcai"></indexlist>
     </div>
@@ -61,11 +61,11 @@
     <div class="home-content">
       <div class="home-title">
         <h3 class="title">粤菜经典</h3>
-         <div>
+         <router-link tag="div" :to="`/MenuList/${4}`">
           <span>更多</span>
           <span class="iconfont icon-changyongicon-2
 "></span>
-        </div>
+        </router-link>
       </div>
       <indexlist :content="index.yuecai"></indexlist>
     </div>
@@ -73,11 +73,11 @@
     <div class="home-content">
       <div class="home-title">
         <h3 class="title">暖心甜点</h3>
-         <div>
+         <router-link tag="div" :to="`/MenuList/${5}`">
           <span>更多</span>
           <span class="iconfont icon-changyongicon-2
 "></span>
-        </div>
+        </router-link>
       </div>
       <indexlist :content="index.dessert"></indexlist>
     </div>
